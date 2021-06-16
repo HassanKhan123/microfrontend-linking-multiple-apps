@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 
 import { mount } from 'auth/AuthApp';
 
-const MarketingApp = () => {
+const AuthApp = ({ onSignIn }) => {
   const ref = useRef(null);
   const history = useHistory();
 
@@ -17,7 +17,7 @@ const MarketingApp = () => {
         }
       },
       onSignin: () => {
-        console.log('user signed in');
+        onSignIn();
       },
     });
 
@@ -26,4 +26,4 @@ const MarketingApp = () => {
   return <div ref={ref}></div>;
 };
 
-export default MarketingApp;
+export default AuthApp;
