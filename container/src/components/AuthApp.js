@@ -16,6 +16,9 @@ const MarketingApp = () => {
           history.push(nextPathname);
         }
       },
+      onSignin: () => {
+        console.log('user signed in');
+      },
     });
 
     history.listen(onParentNavigate);
